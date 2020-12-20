@@ -4,9 +4,9 @@ A system that fetches and performs basic operations on the Quicklisp download st
 
 ## Warning
 
-> 14:51 <Xach> there may be errors - this is the first effort. i am using a mix of shell and sql and stuff and something may have failed to query properly.
+> 14:51 \<Xach\> there may be errors - this is the first effort. i am using a mix of shell and sql and stuff and something may have failed to query properly.
 >
-> 14:53 <Xach> I would caution against inferring too much from this data. many are caused by bots, builds, etc. it's not a true measure of popularity or utility or whatever
+> 14:53 \<Xach\> I would caution against inferring too much from this data. many are caused by bots, builds, etc. it's not a true measure of popularity or utility or whatever
 
 ## API
 
