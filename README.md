@@ -20,7 +20,7 @@ Helper functions:
 * `(all &optional verbosep)`
   * Downloads Quicklisp stats for a given month and returns them.
 * `(month year month &optional verbosep)`
-  * Downloads Quicklisp stats for a given month and returns them.
+  * Downloads all Quicklisp stats and returns them.
 
 All results are cached in `*cache*` whose value is an `equal`-tested hash table, so if data for a given month was already downloaded, it is not fetched again. The keys of `*cache*` are conses of year and month, and values are alists of system names and download counts.
 
