@@ -10,12 +10,17 @@ A system that fetches and performs basic operations on the Quicklisp download st
 
 ## API
 
+The main API function:
+
+* `(system-downloads system year month)`
+  * Returns the number of times `system` was downloaded from Quicklisp during the `month` of `year`, or `nil` if the system was not found in Quicklisp stats for that month.
+
+Helper functions:
+
 * `(fetch-all &optional verbosep)`
   * Downloads Quicklisp stats for a given month and returns them.
 * `(month year month &optional verbosep)`
   * Downloads Quicklisp stats for a given month and returns them.
-* `(system-downloads system year month)`
-  * Returns the number of times `system` was downloaded from Quicklisp during the `month` of `year`, or `nil` if the system was not found in Quicklisp stats for that month.
 
 All results are cached in `*cache*` whose value is an `equal`-tested hash table, so if data for a given month was already downloaded, it is not fetched again. The keys of `*cache*` are conses of year and month, and values are alists of system names and download counts.
 
