@@ -33,7 +33,8 @@ QUICKLISP-STATS> (system-downloads :alexandria 2020 11)
 13731
 
 QUICKLISP-STATS> (loop with stats = (month 2020 4)
-                       with filtered-stats = (remove-if-not (lambda (x) (< 10000 (cdr x))) stats)
+                       with filtered-stats 
+                         = (remove-if-not (lambda (x) (< 10000 (cdr x))) stats)
                        for (system . count) in filtered-stats 
                        do (format t ";; ~20A : ~5D~%" system count))
 ;; alexandria           : 19938
