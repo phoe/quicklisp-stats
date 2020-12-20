@@ -54,6 +54,23 @@ QUICKLISP-STATS> (loop with stats = (month 2020 4)
 ;; anaphora             : 10783
 ;; trivial-backtrace    : 10693
 NIL
+
+QUICKLISP-STATS> (loop for ((year month) . data) in (all)
+                       for result = (a:assoc-value data "bordeaux-threads"
+                                                   :test #'equal)
+                       do (format t ";; ~4,'0D-~2,'0D: ~D~%" year month result))
+;; 2020-01: 16059
+;; 2020-02: 12701
+;; 2020-03: 17123
+;; 2020-04: 14974
+;; 2020-05: 14489
+;; 2020-06: 13851
+;; 2020-07: 14130
+;; 2020-08: 10843
+;; 2020-09: 13757
+;; 2020-10: 13444
+;; 2020-11: 15825
+NIL
 ```
 
 ## License
