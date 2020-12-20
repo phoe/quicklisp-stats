@@ -21,6 +21,35 @@ All results are cached in `*cache*` whose value is an `equal`-tested hash table,
 
 If data for a given month is unavailable, an error of type `no-data-yet` is signaled, with accessors `no-data-yet-month` and `no-data-yet-year` for retrieving the problematic month and year combination.
 
+## Examples
+
+```lisp
+QUICKLISP-STATS> (system-downloads :alexandria 2020 11)
+13731
+
+QUICKLISP-STATS> (loop with stats = (month 2020 4)
+                       with filtered-stats = (remove-if-not (lambda (x) (< 10000 (cdr x))) stats)
+                       for (system . count) in filtered-stats 
+                       do (format t ";; ~20A : ~5D~%" system count))
+;; alexandria           : 19938
+;; cl-ppcre             : 15636
+;; bordeaux-threads     : 14974
+;; trivial-features     : 14569
+;; split-sequence       : 14510
+;; closer-mop           : 14482
+;; trivial-gray-streams : 14259
+;; babel                : 14254
+;; cffi                 : 12365
+;; flexi-streams        : 11940
+;; iterate              : 11924
+;; named-readtables     : 11205
+;; cl-fad               : 10996
+;; usocket              : 10859
+;; anaphora             : 10783
+;; trivial-backtrace    : 10693
+NIL
+```
+
 ## License
 
 MIT
