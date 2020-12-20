@@ -8,6 +8,10 @@ A system that fetches and performs basic operations on the Quicklisp download st
 >
 > 14:53 \<Xach\> I would caution against inferring too much from this data. many are caused by bots, builds, etc. it's not a true measure of popularity or utility or whatever
 
+## Another warning
+
+At the moment of writing these words, the CSV files provided by Quicklisp only show the top 500 projects of each month; @quicklisp mentioned that they might get buffed to the top 1000 projects at some point. In case of any questions about the data rather than the tool used to fetch and parse it, please ask @quicklisp for assistance.
+
 ## API
 
 The main API function:
