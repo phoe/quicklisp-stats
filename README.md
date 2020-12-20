@@ -17,7 +17,7 @@ The main API function:
 
 Helper functions:
 
-* `(fetch-all &optional verbosep)`
+* `(all &optional verbosep)`
   * Downloads Quicklisp stats for a given month and returns them.
 * `(month year month &optional verbosep)`
   * Downloads Quicklisp stats for a given month and returns them.
