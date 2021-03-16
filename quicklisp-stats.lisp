@@ -18,7 +18,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Variables
 
-(defvar *url* "https://www.quicklisp.org/stats/2020/~4,'0D-~2,'0D.csv")
+(defvar *url* "https://www.quicklisp.org/stats/~4,'0D~:*/~4,'0D-~2,'0D.csv")
 
 (defvar *cache* (make-hash-table :test #'equal)
   "The cache storing Quicklisp stats data. Keys are conses of year and month,
